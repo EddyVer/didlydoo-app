@@ -1,0 +1,13 @@
+//TODO 
+
+btn addevent =>
+    formulaire => (char < 256)!required
+        Nom de l'event 
+        Description
+        Les dates proposées
+
+Didlydoo
+    > Choisir ses disposition (dates)
+
+> Edit
+> Delete

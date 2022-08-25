@@ -2,3 +2,17 @@
 @import '././variables';
 @import './fonts.scss';
 @import './layout/all';
+
+.isHidden{
+  display: none;
+}
+.button{
+  padding: 5px;
+  border: 1px solid black;
+  width: fit-content;
+  cursor: pointer;
+  border-radius:5px ;
+  &:hover{
+    background-color: rgba(black, 0.25);
+  }
+}

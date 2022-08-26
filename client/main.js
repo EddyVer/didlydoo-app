@@ -1,6 +1,7 @@
 import {toggleClass} from "./assets/js/components/displayElements.js";
 import {FormData} from "./assets/js/components/FormData.js";
 import { cardEvent } from "./assets/js/components/cardEvent.js";
+import {EventDatas} from "./assets/js/components/EventDatas.js";
 
 const theMain = document.querySelector(".app");
 const btnAddEvent = document.querySelector('.action__add');
@@ -23,13 +24,19 @@ btnFormSend.addEventListener('click', (evt) => {
     evt.preventDefault();
     formData.collectFormData();
     formData.clearFormFields();
-    // TODO formData.submitForm();
     cardEvent(theMain,formData.data);
-    console.log(formData.data);
-    formData.clearData();
+    formData.submitForm();
 })
 function getMinDate(){
     const date = new Date();
     return date.toLocaleString();
 }
 formDateInput.setAttribute('min', getMinDate());
+
+const events = new EventDatas();
+
+async function init(){
+    const data = await events.getEvents();
+    console.log(data)
+}
+init()

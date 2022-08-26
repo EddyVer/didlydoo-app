@@ -4,3 +4,7 @@
 export function toggleClass(elementclass, container){
     container.classList.toggle(elementclass);
 }
+
+export function addClass(elementclass, container){
+    container.classList.add(elementclass);
+}

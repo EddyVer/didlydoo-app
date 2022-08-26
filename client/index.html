@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Didlydoo</title>
-    <link rel="stylesheet" href="./assets/styles/style.css">
-    <script defer type="module" src="./main.js"></script>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Didlydoo</title>
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <script defer type="module" src="./main.js"></script>
+
 </head>
+
 <body>
-<header>
+  <header>
     <h1 class="title">
-        Didlydoo
+      Didlydoo
     </h1>
     <div class="action">
-        <div class="button action__add">
-            Add an Event
+      <div class="button action__add">
+        Add an Event
+      </div>
+      <form class="form isHidden">
+        <div>
+          <label for="name">Name : </label>
+          <input type="text" maxlength="255" id="name" name="name" class="form__name" required>
         </div>
-        <form class="form isHidden">
-            <div>
-                <label for="name">Name : </label>
-                <input type="text" id="name" name="name" class="form__name" required>
-            </div>
-            <div>
-                <label for="description">Description : </label>
-                <textarea name="description" id="description" class="form__description" required></textarea>
-            </div>
-            <div>
-                <label for="author">Author : </label>
-                <input type="text" name="author" id="author" class="form__author">
-            </div>
-            <div>
-                <div class="button form__showAddDate">Add a date</div>
-                <div class="isHidden form__date">
-                    <input type="date" class="form__date__input" min="" required>
-                    <div class="button form__date__add">add</div>
-                </div>
-                <ul class="form__selectedDate">
 
-                </ul>
-            </div>
-            <button type="submit" class="button form__send">
-                Add the Event
-            </button>
-        </form>
+        <div>
+          <label for="description">Description : </label>
+          <textarea name="description" id="description" class="form__description" required></textarea>
+        </div>
+        <div>
+          <label for="author">Author : </label>
+          <input type="text" name="author" id="author" class="form__author">
+        </div>
+        <div>
+          <div class="button form__showAddDate">Add a date</div>
+          <div class="isHidden form__date">
+            <input type="date" class="form__date__input" min="" required>
+            <div class="button form__date__add">add</div>
+          </div>
+          <span class="form__selectedDate--feedback"></span>
+          <ul class="form__selectedDate">
+          </ul>
+        </div>
+        <button type="submit" class="button form__send">
+          Add the Event
+        </button>
+      </form>
     </div>
-</header>
-<main class="app">
+  </header>
+  <main class="app">
 
-</main>
+  </main>
 </body>
+
 </html>

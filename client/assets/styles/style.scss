@@ -1,7 +1,7 @@
-@import './reset';
-@import '././variables';
-@import 'fonts';
-@import './layout/all';
+@import'./variables';
+@import 'reset';
+@import'layout/all';
+@import 'fonts.scss';
 
 .isHidden{
   display: none;
@@ -16,3 +16,7 @@
     background-color: rgba(black, 0.25);
   }
 }
+.errorfields{
+border: solid 2px red;  
+}
+

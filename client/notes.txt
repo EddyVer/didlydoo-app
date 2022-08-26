@@ -4,6 +4,7 @@ btn addevent =>
     formulaire => (char < 256)!required
         Nom de l'event 
         Description
+        Lieu (facultatif)
         Les dates proposées
 
 Didlydoo

@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Didlydoo</title>
-  <link rel="stylesheet" href="./assets/styles/style.css">
+  <link rel="stylesheet" href="assets/styles/style.css">
   <script defer type="module" src="./main.js"></script>
+
 </head>
 
 <body>
@@ -24,13 +26,14 @@
           <label for="name">Name : </label>
           <input type="text" maxlength="255" id="name" name="name" class="form__name" required>
         </div>
+
         <div>
           <label for="description">Description : </label>
           <textarea name="description" id="description" class="form__description" required></textarea>
         </div>
         <div>
-          <label for="place">Place : </label>
-          <input type="text" name="place" maxlength="255" id="place" class="form__place">
+          <label for="author">Author : </label>
+          <input type="text" name="author" id="author" class="form__author">
         </div>
         <div>
           <div class="button form__showAddDate">Add a date</div>
@@ -40,7 +43,6 @@
           </div>
           <span class="form__selectedDate--feedback"></span>
           <ul class="form__selectedDate">
-
           </ul>
         </div>
         <button type="submit" class="button form__send">

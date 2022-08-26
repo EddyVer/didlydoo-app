@@ -4,9 +4,11 @@
 export function toggleClass(elementclass, container) {
     container.classList.toggle(elementclass);
 }
+
 export function addClass(elementclass, container) {
     container.classList.add(elementclass);
 }
 export function removeClass(elementclass, container) {
     container.classList.remove(elementclass);
+
 }

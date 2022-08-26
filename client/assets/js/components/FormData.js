@@ -43,7 +43,7 @@ export class FormData{
     }
     submitForm(){
         this.datas.postEvents(this.data).then(
-                this.clearFormFields()
+                this.clearData()
         )
     }
 }

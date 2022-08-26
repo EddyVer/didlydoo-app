@@ -1,7 +1,8 @@
-@import './reset';
-@import '././variables';
-@import './fonts.scss';
-@import './layout/all';
+@import 'reset';
+@import'layout/all';
+@import 'fonts.scss';
+@import 'layout/all';
+@import "layout/styleCard";
 
 .isHidden{
   display: none;

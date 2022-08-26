@@ -13,7 +13,8 @@ export class FormData{
         this.data = {
             name: '',
             description: '',
-            place: '',
+            author: '',
+            available:true,
             dates: []
         }
     }

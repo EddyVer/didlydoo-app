@@ -1,8 +1,7 @@
+@import'./variables';
 @import 'reset';
 @import'layout/all';
 @import 'fonts.scss';
-@import 'layout/all';
-@import "layout/styleCard";
 
 .isHidden{
   display: none;
@@ -19,12 +18,5 @@
 }
 .errorfields{
 border: solid 2px red;  
+}
 
-}
-.title{
-margin: 2.5rem;
-font-size: 5em;
-display: flex;
-justify-content: center;
-align-items: center;
-}

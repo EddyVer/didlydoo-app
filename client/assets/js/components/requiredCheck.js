@@ -1,6 +1,6 @@
 import { addClass, removeClass } from "./displayElements.js";
-import { FormData } from "./FormData.js";
-const formFields = new FormData();
+import { AddEvent } from "./AddEvent.js";
+const formFields = new AddEvent();
 
 export function requiredCheck() {
 

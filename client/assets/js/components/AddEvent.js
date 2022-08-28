@@ -1,7 +1,7 @@
 import {clearChilds, formatDate} from "./utilities.js";
 import {EventDatas} from "./EventDatas.js";
 
-export class FormData{
+export class AddEvent {
     constructor() {
         this.init();
         this.selectedDate = document.querySelector('.form__selectedDate');

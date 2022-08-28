@@ -23,7 +23,11 @@ const btnCloseForm = document.querySelector('.closeForm');
 const pageAction = document.querySelector('.action');
 const inputAuthor = document.querySelector('.form__author');
 
-const datepicker = new Datepicker(formDateInput, );
+const datepicker = new Datepicker(formDateInput, {
+    maxNumberOfDates: 5,
+    minDate: 'Today',
+    format: "dd-mm-yyyy",
+});
 const formData = new AddEvent();
 
 btnCloseForm.addEventListener('click', () => {

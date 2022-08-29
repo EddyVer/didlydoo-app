@@ -23,12 +23,22 @@ export function requiredCheck() {
         addClass("goodfields", formFields.formDescription);
         removeClass("errorfields", formFields.formDescription);
     }
-    validity = requiredDate();
+
+    if (formFields.inputDate.value === ""){
+        addClass("errorfields", formFields.inputDate);
+        removeClass("goodfields", formFields.inputDate);
+        validity = false
+    }else{
+        addClass("goodfields", formFields.inputDate);
+        removeClass("errorfields", formFields.inputDate);
+    }
+
     return validity;
     // TO DO Date Verification 
 
 
 }
+/*
 function requiredDate() {
     let validity;
 
@@ -43,3 +53,4 @@ function requiredDate() {
 
     return validity;
 }
+*/

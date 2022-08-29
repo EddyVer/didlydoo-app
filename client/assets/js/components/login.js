@@ -1,5 +1,6 @@
 import {EventDatas} from "./EventDatas.js";
 
+const db = new EventDatas();
 const html = (options) => {
 return `
 <div class="login">
@@ -15,13 +16,16 @@ return `
 }
 
 async function getLogin(){
-    const db = new EventDatas();
     return await db.getAttendees();
+}
+
+export async function getUserEvents(user){
+    const events = await db.getEvents();
+    return [...events].filter(event => event.author == user)
 }
 
 export async function buildLoginPage(){
     const users = await getLogin();
     let options; options += [...users].map(user =>  `<option value="${user.name}">${user.name}</option>`).join('')
-    console.log(options)
     document.querySelector('.app').insertAdjacentHTML('afterbegin', html(options));
 }

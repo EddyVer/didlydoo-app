@@ -32,6 +32,7 @@ export class AddEvent {
         this.formName.value = '';
         this.formDescription.value = '';
         this.formAuthor.value = '';
+        this.inputDate.value = '';
     }
     collectFormData(){
         this.data.name = this.formName.value;
@@ -40,7 +41,7 @@ export class AddEvent {
         this.data.dates = this.inputDate.value.split(',');
     }
     submitForm(){
-        this.datas.postEvents(this.data).then(
+        return this.datas.postEvents(this.data).then(
                 this.clearData()
         )
     }

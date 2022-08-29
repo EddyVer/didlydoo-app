@@ -9,23 +9,41 @@ function modalRegister(data, user) {
     btn.classList.add('button');
     btn.classList.add('modal__validate');
     btn.innerText ="OK";
-    const html = () => {
-        return `
-            <span class="closeModal">Close this shit</span>
-            <div>
-                <p>Choose your availability</p>
-                <fieldset>
-                <ul class="modal__dates">
-                    ${data.dates.map(date => {
-                        console.log(date.date);
-                        return `<li class="modal__date"><label for="${date.date}">${date.date}</label><input type="checkbox" id="${date.date}" name="${date.date}" checked></li>`                   
-                    }).join('')}
-                </ul> 
-                </fieldset>
-            </div>
-        `
-    }
-    modal.innerHTML= html();
+    
+    const close = document.createElement("span");
+    close.classList.add("closeModal");
+    modal.append(close);
+    const divUl = document.createElement("div");
+
+    const paraModal = document.createElement("p");
+    paraModal.innerText = "Choose your availability";
+    divUl.append(paraModal);
+    
+    const fiel = document.createElement("fieldset");
+    const list = document.createElement("ul");
+    list.classList.add("modal__dates");
+    fiel.append(list);
+    
+    data.dates.map(date => {
+        const elementList = document.createElement("li");
+        elementList.classList.add("modal__date");
+        
+        const labelElement = document.createElement("label");
+        labelElement.setAttribute("for",`${date.date}`);
+        labelElement.innerText = `${date.date}`;
+        elementList.append(labelElement);
+
+        const inputElement = document.createElement("input");
+        inputElement.type = "checkbox";
+        inputElement.id = `${date.date}`;
+        inputElement.name =`${date.date}`;
+
+        elementList.append(inputElement);
+        list.appendChild(elementList);
+    })
+    divUl.append(list);
+    modal.append(divUl);
+
     modal.append(btn);
     /// api/events/[id]/attend
     //{ name: string, dates : [ { date: date 'YYYY-MM-DD', available: boolean (true/false) } ] }
@@ -37,15 +55,13 @@ function modalRegister(data, user) {
         finalData.dates =
         db.patchEventAttend(data.id, )
     })
-
+   
     return modal;
 
 }
 
 export function cardEvent(parent, formData, user) {
-
     
-
     const articleCard = document.createElement("article");
     articleCard.classList.add("card");
 
@@ -96,8 +112,12 @@ export function cardEvent(parent, formData, user) {
     articleCard.appendChild(butAddName);
 
     butAddName.addEventListener('click', () => {
-        articleCard.prepend(modalRegister(formData, user))
-
+        articleCard.prepend(modalRegister(formData, user));
+        
+        const lebtn = document.querySelector(".modal__validate");
+        const lenfant = document.querySelector(".add");
+        console.log(lebtn);
+        eventCloseModal(lebtn,articleCard,lenfant);
 
         // if (butAddName.classList.contains('tempo')) {
         //     createInput(articleCard);
@@ -111,6 +131,7 @@ export function cardEvent(parent, formData, user) {
         //     butAddName.classList.add("tempo");
         // }
     })
+
     parent.appendChild(articleCard);
 }
 function createInput(parent) {
@@ -138,3 +159,285 @@ function addlineTable(parent, inputValue) {
     db.postEventsAttend(inputValue);
     parent.appendChild(lineParticip);
 }
+function eventCloseModal(btn,parent,child){
+   btn.addEventListener("click",() => {parent.removeChild(child)});
+}
+
+/*
+[
+    {
+        "id": "7dcd841debeb",
+        "name": "aze",
+        "author": "aez",
+        "description": "aze",
+        "dates": [
+            {
+                "date": "2022-07-09",
+                "attendees": []
+            }
+        ],
+        "created_at": "2022-08-26T13:55:53.973Z",
+        "num_modification": 0,
+        "last_modification": "2022-08-26T13:55:53.973Z"
+    },
+    {
+        "id": "aa0e69942bf6",
+        "name": "aze",
+        "author": "azef",
+        "description": "fffff",
+        "dates": [
+            {
+                "date": "2022-07-09",
+                "attendees": []
+            }
+        ],
+        "created_at": "2022-08-26T13:53:18.866Z",
+        "num_modification": 0,
+        "last_modification": "2022-08-26T13:53:18.866Z"
+    },
+    {
+        "id": "54a2d5a42c4f",
+        "name": "zzzz",
+        "author": "zezzeze",
+        "description": "zeze",
+        "dates": [
+            {
+                "date": "2022-07-09",
+                "attendees": []
+            },
+            {
+                "date": "2022-07-09",
+                "attendees": []
+            },
+            {
+                "date": "2022-07-09",
+                "attendees": []
+            }
+        ],
+        "created_at": "2022-08-26T13:52:35.363Z",
+        "num_modification": 0,
+        "last_modification": "2022-08-26T13:52:35.363Z"
+    },
+    {
+        "id": "e4a77c7ab44d",
+        "name": "aaaaa",
+        "author": "azeeza",
+        "description": "zaeaz",
+        "dates": [
+            {
+                "date": "2022-07-09",
+                "attendees": []
+            },
+            {
+                "date": "2022-07-09",
+                "attendees": []
+            },
+            {
+                "date": "2022-07-09",
+                "attendees": []
+            }
+        ],
+        "created_at": "2022-08-26T13:41:21.817Z",
+        "num_modification": 0,
+        "last_modification": "2022-08-26T13:41:21.817Z"
+    },
+    {
+        "id": "c2f9a120adef",
+        "name": "zerzer",
+        "author": "erzzerzer",
+        "description": "zererzzer",
+        "dates": [
+            {
+                "date": "2022-07-09",
+                "attendees": []
+            }
+        ],
+        "created_at": "2022-08-26T13:40:39.840Z",
+        "num_modification": 0,
+        "last_modification": "2022-08-26T13:40:39.840Z"
+    },
+    {
+        "id": "fe74e8632fe3",
+        "name": "erzrze",
+        "author": "fdsdfsdfsd",
+        "description": "erzrzedf",
+        "dates": [
+            {
+                "date": "2022-07-09",
+                "attendees": []
+            }
+        ],
+        "created_at": "2022-08-26T13:37:52.037Z",
+        "num_modification": 0,
+        "last_modification": "2022-08-26T13:37:52.037Z"
+    },
+    {
+        "id": "4f68345fdd71",
+        "name": "rezezr",
+        "author": "ezrzerrez",
+        "description": "erzrez",
+        "dates": [
+            {
+                "date": "2022-07-28",
+                "attendees": []
+            }
+        ],
+        "created_at": "2022-08-26T13:36:38.139Z",
+        "num_modification": 0,
+        "last_modification": "2022-08-26T13:36:38.139Z"
+    },
+    {
+        "id": "1c187cf90ca7",
+        "name": "ezze",
+        "author": "zeze",
+        "description": "zeze",
+        "dates": [
+            {
+                "date": "2022-08-03",
+                "attendees": []
+            }
+        ],
+        "created_at": "2022-08-26T08:08:13.876Z",
+        "num_modification": 0,
+        "last_modification": "2022-08-26T08:08:13.876Z"
+    },
+    {
+        "id": "f5b6564b5dc4",
+        "name": "My sweet 16",
+        "description": "I am going to be 16, let us all party together! Help me pick a date so we can go together",
+        "author": "John Doe",
+        "dates": [
+            {
+                "date": "2022-03-17",
+                "attendees": [
+                    {
+                        "name": "Michou",
+                        "available": true
+                    },
+                    {
+                        "name": "Jean-Daniel",
+                        "available": false
+                    }
+                ]
+            },
+            {
+                "date": "2022-03-18",
+                "attendees": [
+                    {
+                        "name": "Michou",
+                        "available": false
+                    },
+                    {
+                        "name": "Jean-Daniel",
+                        "available": null
+                    }
+                ]
+            },
+            {
+                "date": "2022-03-21",
+                "attendees": [
+                    {
+                        "name": "Michou",
+                        "available": true
+                    },
+                    {
+                        "name": "Jean-Daniel",
+                        "available": true
+                    }
+                ]
+            },
+            {
+                "date": "2022-03-22",
+                "attendees": [
+                    {
+                        "name": "Michou",
+                        "available": null
+                    },
+                    {
+                        "name": "Jean-Daniel",
+                        "available": null
+                    }
+                ]
+            }
+        ],
+        "created_at": "2021-11-15T00:00",
+        "num_modification": 3,
+        "last_modification": "2021-11-15T02:15"
+    },
+    {
+        "id": "38b643aeb883",
+        "name": "The big sale @ The Mall",
+        "description": "I want to buy stuff at the mall, but don't want to go alone who is up?",
+        "author": "Jean D'eau",
+        "dates": [
+            {
+                "date": "2022-01-10",
+                "attendees": [
+                    {
+                        "name": "Michou",
+                        "available": true
+                    },
+                    {
+                        "name": "Jane Doe",
+                        "available": true
+                    }
+                ]
+            },
+            {
+                "date": "2022-02-10",
+                "attendees": [
+                    {
+                        "name": "Michou",
+                        "available": null
+                    },
+                    {
+                        "name": "Jane Doe",
+                        "available": true
+                    }
+                ]
+            },
+            {
+                "date": "2022-03-10",
+                "attendees": [
+                    {
+                        "name": "Michou",
+                        "available": null
+                    },
+                    {
+                        "name": "Jane Doe",
+                        "available": true
+                    }
+                ]
+            },
+            {
+                "date": "2022-03-11",
+                "attendees": [
+                    {
+                        "name": "Michou",
+                        "available": null
+                    },
+                    {
+                        "name": "Jane Doe",
+                        "available": true
+                    }
+                ]
+            },
+            {
+                "date": "2022-03-12",
+                "attendees": [
+                    {
+                        "name": "Michou",
+                        "available": null
+                    },
+                    {
+                        "name": "Jane Doe",
+                        "available": false
+                    }
+                ]
+            }
+        ],
+        "created_at": "2021-11-13T14:00",
+        "num_modification": 0,
+        "last_modification": "2021-11-13T14:00"
+    }
+]*/

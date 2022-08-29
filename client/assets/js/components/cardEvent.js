@@ -1,4 +1,48 @@
-export function cardEvent(main, formData) {
+import {EventDatas} from "./EventDatas.js";
+const db = new EventDatas();
+
+function modalRegister(data, user) {
+    const modal = document.createElement('div');
+    modal.classList.add('add')
+    modal.setAttribute('data-id', data.id);
+    const btn = document.createElement('div');
+    btn.classList.add('button');
+    btn.classList.add('modal__validate');
+    btn.innerText ="OK";
+    const html = () => {
+        return `
+            <span class="closeModal">Close this shit</span>
+            <div>
+                <p>Choose your availability</p>
+                <fieldset>
+                <ul class="modal__dates">
+                    ${data.dates.map(date => {
+                        console.log(date.date);
+                        return `<li class="modal__date"><label for="${date.date}">${date.date}</label><input type="checkbox" id="${date.date}" name="${date.date}" checked></li>`                   
+                    }).join('')}
+                </ul> 
+                </fieldset>
+            </div>
+        `
+    }
+    modal.innerHTML= html();
+    modal.append(btn);
+    /// api/events/[id]/attend
+    //{ name: string, dates : [ { date: date 'YYYY-MM-DD', available: boolean (true/false) } ] }
+    let buildData = data.dates.map(date => { return {date: date.date, available:false} })
+    let finalData = { name: user.name , dates: buildData }
+    db.postEventsAttend(data.id, finalData);
+
+    btn.addEventListener('click', (event) => {
+        finalData.dates =
+        db.patchEventAttend(data.id, )
+    })
+
+    return modal;
+
+}
+
+export function cardEvent(parent, formData, user) {
 
     
 
@@ -34,7 +78,7 @@ export function cardEvent(main, formData) {
             dateEvent.innerText = date.date;
         }
         else{
-           dateEvent.innerText = date;
+            dateEvent.innerText = date;
         }
         lineTitle.appendChild(dateEvent);
     })
@@ -52,19 +96,22 @@ export function cardEvent(main, formData) {
     articleCard.appendChild(butAddName);
 
     butAddName.addEventListener('click', () => {
-        if (butAddName.classList.contains('tempo')) {
-            createInput(articleCard);
-            butAddName.innerText = "valid Participent"
-            butAddName.classList.remove('tempo');
-        } else {
-            const inputTempo = document.querySelector(".card__input");
-            addlineTable(tableDate, inputTempo.value)
-            removeInput(articleCard);
-            butAddName.innerText = "add participent";
-            butAddName.classList.add("tempo");
-        }
+        articleCard.prepend(modalRegister(formData, user))
+
+
+        // if (butAddName.classList.contains('tempo')) {
+        //     createInput(articleCard);
+        //     butAddName.innerText = "valid Participent"
+        //     butAddName.classList.remove('tempo');
+        // } else {
+        //     const inputTempo = document.querySelector(".card__input");
+        //     addlineTable(tableDate, inputTempo.value)
+        //     removeInput(articleCard);
+        //     butAddName.innerText = "add participent";
+        //     butAddName.classList.add("tempo");
+        // }
     })
-    main.appendChild(articleCard);
+    parent.appendChild(articleCard);
 }
 function createInput(parent) {
     const tempoInput = document.createElement("input");
@@ -87,6 +134,8 @@ function addlineTable(parent, inputValue) {
         validDate.innerText = `test${i}`;
         lineParticip.appendChild(validDate);
     }
+
+    db.postEventsAttend(inputValue);
     parent.appendChild(lineParticip);
 }
 

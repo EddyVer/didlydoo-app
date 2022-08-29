@@ -69,21 +69,19 @@ const events = new EventDatas();
 
 async function init() {
     const data = await events.getEvents();
-    console.log(data);
     for(let i = 0; i < data.length; i++){
-        cardEvent(cards, data[i]);
+        cardEvent(cards, data[i], user);
     }
     const users = await events.getAttendees();
 }
 async function setLoginEvent(){
     await buildLoginPage();
     const btnLogin = document.querySelector('.login__form__btn');
-    console.log(btnLogin)
     btnLogin.addEventListener('click', async (event) => {
         event.preventDefault()
         user.name = document.querySelector('#select__login').value;
         user.events = await getUserEvents(user.name);
-        console.log(user)
+        console.log(user.events)
         addClass('isHidden',document.querySelector(".login__form"))
         removeClass('isHidden', pageAction )
         init()

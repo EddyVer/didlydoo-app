@@ -360,3 +360,20 @@ function addlineTable(parent, inputValue) {
         "last_modification": "2021-11-13T14:00"
     }
 ]*/
+
+/*
+{
+    "id": "e97c0008b282",
+    "name": "aazeaze",
+    "author": "Michou",
+    "description": "azeeazeaz",
+    "dates": [
+    "2022-08-31",
+    "2022-08-30",
+    "2022-08-29"
+],
+    "created_at": "2022-08-29T08:53:25.251Z",
+    "num_modification": 0,
+    "last_modification": "2022-08-29T08:53:25.251Z",
+    "attendees": []
+}*/

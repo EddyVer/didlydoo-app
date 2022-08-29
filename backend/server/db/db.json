@@ -12,7 +12,25 @@
     "created_at": "2022-08-29T08:53:25.251Z",
     "num_modification": 0,
     "last_modification": "2022-08-29T08:53:25.251Z",
-    "attendees": []
+    "attendees": [
+      {
+        "name": "Michou",
+        "dates": [
+          {
+            "date": "2022-08-29",
+            "available": false
+          },
+          {
+            "date": "2022-08-30",
+            "available": false
+          },
+          {
+            "date": "2022-08-31",
+            "available": false
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "1a19d9df476a",

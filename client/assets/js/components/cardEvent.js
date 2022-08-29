@@ -9,23 +9,41 @@ function modalRegister(data, user) {
     btn.classList.add('button');
     btn.classList.add('modal__validate');
     btn.innerText ="OK";
-    const html = () => {
-        return `
-            <span class="closeModal">Close this shit</span>
-            <div>
-                <p>Choose your availability</p>
-                <fieldset>
-                <ul class="modal__dates">
-                    ${data.dates.map(date => {
-                        console.log(date.date);
-                        return `<li class="modal__date"><label for="${date.date}">${date.date}</label><input type="checkbox" id="${date.date}" name="${date.date}" checked></li>`                   
-                    }).join('')}
-                </ul> 
-                </fieldset>
-            </div>
-        `
-    }
-    modal.innerHTML= html();
+    
+    const close = document.createElement("span");
+    close.classList.add("closeModal");
+    modal.append(close);
+    const divUl = document.createElement("div");
+
+    const paraModal = document.createElement("p");
+    paraModal.innerText = "Choose your availability";
+    divUl.append(paraModal);
+    
+    const fiel = document.createElement("fieldset");
+    const list = document.createElement("ul");
+    list.classList.add("modal__dates");
+    fiel.append(list);
+    
+    data.dates.map(date => {
+        const elementList = document.createElement("li");
+        elementList.classList.add("modal__date");
+        
+        const labelElement = document.createElement("label");
+        labelElement.setAttribute("for",`${date.date}`);
+        labelElement.innerText = `${date.date}`;
+        elementList.append(labelElement);
+
+        const inputElement = document.createElement("input");
+        inputElement.type = "checkbox";
+        inputElement.id = `${date.date}`;
+        inputElement.name =`${date.date}`;
+
+        elementList.append(inputElement);
+        list.appendChild(elementList);
+    })
+    divUl.append(list);
+    modal.append(divUl);
+
     modal.append(btn);
     /// api/events/[id]/attend
     //{ name: string, dates : [ { date: date 'YYYY-MM-DD', available: boolean (true/false) } ] }
@@ -37,15 +55,13 @@ function modalRegister(data, user) {
         finalData.dates =
         db.patchEventAttend(data.id, )
     })
-
+   
     return modal;
 
 }
 
 export function cardEvent(parent, formData, user) {
-
     
-
     const articleCard = document.createElement("article");
     articleCard.classList.add("card");
 
@@ -96,8 +112,12 @@ export function cardEvent(parent, formData, user) {
     articleCard.appendChild(butAddName);
 
     butAddName.addEventListener('click', () => {
-        articleCard.prepend(modalRegister(formData, user))
-
+        articleCard.prepend(modalRegister(formData, user));
+        
+        const lebtn = document.querySelector(".modal__validate");
+        const lenfant = document.querySelector(".add");
+        console.log(lebtn);
+        eventCloseModal(lebtn,articleCard,lenfant);
 
         // if (butAddName.classList.contains('tempo')) {
         //     createInput(articleCard);
@@ -111,6 +131,7 @@ export function cardEvent(parent, formData, user) {
         //     butAddName.classList.add("tempo");
         // }
     })
+
     parent.appendChild(articleCard);
 }
 function createInput(parent) {
@@ -137,6 +158,9 @@ function addlineTable(parent, inputValue) {
 
     db.postEventsAttend(inputValue);
     parent.appendChild(lineParticip);
+}
+function eventCloseModal(btn,parent,child){
+   btn.addEventListener("click",() => {parent.removeChild(child)});
 }
 
 /*

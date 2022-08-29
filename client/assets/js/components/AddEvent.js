@@ -24,9 +24,6 @@ export class AddEvent {
         this.data.dates.push(date);
         this.selectedDate.innerHTML += `<li>${this.inputDate.value}</li>`;
     }
-    deleteListItem(){
-
-    }
     clearData(){
         this.init();
     }
@@ -40,6 +37,7 @@ export class AddEvent {
         this.data.name = this.formName.value;
         this.data.description = this.formDescription.value;
         this.data.author = this.formAuthor.value;
+        this.data.dates = this.inputDate.value.split(',');
     }
     submitForm(){
         this.datas.postEvents(this.data).then(

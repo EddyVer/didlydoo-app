@@ -10,7 +10,6 @@ import {buildLoginPage} from "./assets/js/components/login.js";
 // Variable to stock current users of the app.
 let user;
 
-
 const app = document.querySelector(".app");
 const btnAddEvent = document.querySelector('.action__add');
 //const btnShowDate = document.querySelector('.form__showAddDate');

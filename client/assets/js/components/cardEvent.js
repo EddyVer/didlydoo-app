@@ -1,6 +1,6 @@
 export function cardEvent(main, formData) {
 
-    console.log(formData[0].dates[0].date);
+    //console.log(formData[0].dates[0].date);
 
     const articleCard = document.createElement("article");
     articleCard.classList.add("card");

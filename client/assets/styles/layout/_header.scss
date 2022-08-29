@@ -1,7 +1,38 @@
 .title{
-  margin: 2.5rem;
+  background-color: $color-Background;
+  padding: 2.5rem;
   font-size: 5em;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.action{
+    &__add{
+    
+    margin: auto;
+    }
+    background-color: $color-Light-Blue;
+    border: 2px solid #2C3333;
+    padding: 2%;
+}
+.button{
+    background-color: #E7F6F2;
+    
+}
+.login__form{
+padding: 2.5%;
+border: 2px solid #2C3333;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color:#B1D0E0 ;
+}
+.loging__form__select{
+    margin: 1em;
+}
+body{
+    background-color: #6998AB
+}
+.form__date{
+    padding-bottom: 2.5em;
 }

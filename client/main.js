@@ -1,11 +1,11 @@
-import {Datepicker} from "vanillajs-datepicker";
+import { Datepicker } from "vanillajs-datepicker";
 import { AddEvent } from "./assets/js/components/AddEvent.js";
 import { cardEvent } from "./assets/js/components/cardEvent.js";
 import { EventDatas } from "./assets/js/components/EventDatas.js";
 import { addClass, removeClass, toggleClass } from "./assets/js/components/displayElements.js";
 import { requiredCheck } from "./assets/js/components/requiredCheck.js";
-import {formatDate} from "./assets/js/components/utilities";
-import {buildLoginPage, getUserEvents} from "./assets/js/components/login.js";
+import { formatDate } from "./assets/js/components/utilities";
+import { buildLoginPage, getUserEvents } from "./assets/js/components/login.js";
 
 // Variable to stock current users of the app.
 let user = {
@@ -35,7 +35,7 @@ const formData = new AddEvent();
 
 btnCloseForm.addEventListener('click', () => {
     addClass('isHidden', formContainer);
-    removeClass('isHidden',btnAddEvent);
+    removeClass('isHidden', btnAddEvent);
 })
 btnAddEvent.addEventListener('click', () => {
     toggleClass('isHidden', formContainer);
@@ -43,16 +43,14 @@ btnAddEvent.addEventListener('click', () => {
     inputAuthor.value = user.name;
 })
 //btnShowDate.addEventListener('click', () => toggleClass('isHidden', formDate));
-btnAddDate.addEventListener('click', () => {
-    formData.addListItem();
-})
+
 btnFormSend.addEventListener('click', async (evt) => {
     evt.preventDefault();
     if (requiredCheck() === false) return;
     formData.collectFormData();
     formData.clearFormFields();
     addClass('isHidden', formContainer);
-    removeClass('isHidden',btnAddEvent);
+    removeClass('isHidden', btnAddEvent);
     const newEvent = await formData.submitForm();
     console.log(newEvent.dates);
     cardEvent(cards, newEvent);
@@ -70,12 +68,12 @@ const events = new EventDatas();
 async function init() {
     const data = await events.getEvents();
     console.log(data);
-    for(let i = 0; i < data.length; i++){
+    for (let i = 0; i < data.length; i++) {
         cardEvent(cards, data[i]);
     }
     const users = await events.getAttendees();
 }
-async function setLoginEvent(){
+async function setLoginEvent() {
     await buildLoginPage();
     const btnLogin = document.querySelector('.login__form__btn');
     console.log(btnLogin)
@@ -84,8 +82,8 @@ async function setLoginEvent(){
         user.name = document.querySelector('#select__login').value;
         user.events = await getUserEvents(user.name);
         console.log(user)
-        addClass('isHidden',document.querySelector(".login__form"))
-        removeClass('isHidden', pageAction )
+        addClass('isHidden', document.querySelector(".login__form"))
+        removeClass('isHidden', pageAction)
         init()
     })
 }

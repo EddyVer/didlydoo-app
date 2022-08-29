@@ -1,6 +1,6 @@
 export function cardEvent(main, formData) {
 
-    console.log(formData[0].dates[0].date);
+    
 
     const articleCard = document.createElement("article");
     articleCard.classList.add("card");
@@ -24,14 +24,22 @@ export function cardEvent(main, formData) {
     tableDate.classList.add("card__table");
     const lineTitle = document.createElement("tr")
     lineTitle.classList.add("card__table__title");
-    const paraticipName = document.createElement("th");
+    const paraticipName = document.createElement("td");
     paraticipName.innerText = "Participant";
     lineTitle.appendChild(paraticipName);
-    for (let i = 0; i < formData.dates.length; i++) {
-        const dateEvent = document.createElement("th");
-        dateEvent.innerText = formData.dates[i];
+    
+    formData.dates.map( date => {
+        const dateEvent = document.createElement("td");
+        if(date.date){
+            dateEvent.innerText = date.date;
+        }
+        else{
+           dateEvent.innerText = date;
+        }
         lineTitle.appendChild(dateEvent);
-    }
+    })
+
+
     tableDate.appendChild(lineTitle);
 
     // console.log(lineTitle.childNodes.length);

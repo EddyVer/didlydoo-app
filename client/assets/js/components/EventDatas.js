@@ -65,9 +65,11 @@ export class EventDatas {
                 },
                 body: JSON.stringify(dataToPost),
             });
-            response.json().then(data => {
-                console.log(data);
+            const data = await response.json().then(data => {
+                console.log(data)
+                return data;
             })
+            return await data
         }
         catch (error){
             console.error(error)
@@ -87,6 +89,7 @@ export class EventDatas {
             });
             response.json().then(data => {
                 console.log(data);
+                return data
             })
         }
         catch (error){

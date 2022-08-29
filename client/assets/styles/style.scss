@@ -1,8 +1,8 @@
+@import'variables';
 @import 'reset';
-@import'layout/all';
-@import 'fonts.scss';
-@import 'layout/all';
-@import "layout/styleCard";
+@import'./layout/all';
+@import 'fonts';
+@import "../../node_modules/vanillajs-datepicker/sass/datepicker";
 
 .isHidden{
   display: none;
@@ -16,4 +16,7 @@
   &:hover{
     background-color: rgba(black, 0.25);
   }
+}
+.errorfields{
+  border: solid 2px red;
 }

@@ -17,28 +17,35 @@
     <h1 class="title">
       Didlydoo
     </h1>
-    <div class="action">
+
+  </header>
+  <main class="app">
+    <div class="action isHidden">
       <div class="button action__add">
         Add an Event
       </div>
       <form class="form isHidden">
+        <span class="closeForm button"></span>
         <div>
-          <label for="name" class="label">Name : </label>
-          <input type="text" maxlength="255" id="name" name="name" class="form__name" required>
+          <label for="name">Name : </label>
+          <input placeholder="Name of the Event" type="text" maxlength="255" id="name" name="name" class="form__name"
+            required>
         </div>
 
         <div>
-          <label for="description" class="label">Description : </label>
-          <textarea name="description" id="description" class="form__description" required></textarea>
+          <label for="description">Description : </label>
+          <textarea placeholder="Describe what your event will consist of" name="description" id="description"
+            class="form__description" required></textarea>
         </div>
         <div>
-          <label for="author" class="label">Author : </label>
-          <input type="text" name="author" id="author" class="form__author">
+          <label for="author">Author : </label>
+          <input type="text" name="author" id="author" class="form__author" readonly required>
         </div>
         <div>
-          <div class="button form__showAddDate">Add a date</div>
-          <div class="isHidden form__date">
-            <input type="date" class="form__date__input" min="" required>
+          <div class="form__date">
+            <label for="form__date__input">Select dates :</label>
+            <input type="text" class="form__date__input input date datepicker-input" name="form__date__input"
+              id="form__date__input" required>
             <div class="button form__date__add">add</div>
           </div>
           <span class="form__selectedDate--feedback"></span>
@@ -50,9 +57,6 @@
         </button>
       </form>
     </div>
-  </header>
-  <main class="app">
-
   </main>
 </body>
 

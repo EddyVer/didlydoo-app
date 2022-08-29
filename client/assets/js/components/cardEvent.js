@@ -51,11 +51,6 @@ function modalRegister(data, user) {
     let finalData = { name: user.name , dates: buildData }
     db.postEventsAttend(data.id, finalData);
 
-    btn.addEventListener('click', (event) => {
-        finalData.dates =
-        db.patchEventAttend(data.id, )
-    })
-   
     return modal;
 
 }
@@ -117,19 +112,13 @@ export function cardEvent(parent, formData, user) {
         const lebtn = document.querySelector(".modal__validate");
         const lenfant = document.querySelector(".add");
         console.log(lebtn);
-        eventCloseModal(lebtn,articleCard,lenfant);
+        eventCloseModal({
+            child:lenfant,
+            parent:articleCard,
+            btn:lebtn,
+        }, user );
 
-        // if (butAddName.classList.contains('tempo')) {
-        //     createInput(articleCard);
-        //     butAddName.innerText = "valid Participent"
-        //     butAddName.classList.remove('tempo');
-        // } else {
-        //     const inputTempo = document.querySelector(".card__input");
-        //     addlineTable(tableDate, inputTempo.value)
-        //     removeInput(articleCard);
-        //     butAddName.innerText = "add participent";
-        //     butAddName.classList.add("tempo");
-        // }
+
     })
 
     parent.appendChild(articleCard);
@@ -159,8 +148,20 @@ function addlineTable(parent, inputValue) {
     db.postEventsAttend(inputValue);
     parent.appendChild(lineParticip);
 }
-function eventCloseModal(btn,parent,child){
-   btn.addEventListener("click",() => {parent.removeChild(child)});
+function eventCloseModal(object, user){
+    const dates = document.querySelectorAll('.modal__date');
+    let finalData = { name: user.name , dates: [] }
+    const id = object.child.dataset.id;
+    object.btn.addEventListener("click",() => {
+        finalData.dates = [...dates].map(date => {
+            let bool = false
+            if(date.querySelector('input').checked) bool = true;
+            return { date : date.querySelector('input').id , available: bool }
+        })
+        object.parent.removeChild(object.child)
+        console.log(finalData)
+    });
+    db.patchEventAttend(id, finalData)
 }
 
 /*

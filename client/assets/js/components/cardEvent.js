@@ -108,7 +108,6 @@ export function cardEvent(parent, formData, user) {
 
     butAddName.addEventListener('click', () => {
         articleCard.prepend(modalRegister(formData, user));
-        
         const lebtn = document.querySelector(".modal__validate");
         const lenfant = document.querySelector(".add");
         console.log(lebtn);
@@ -117,21 +116,17 @@ export function cardEvent(parent, formData, user) {
             parent:articleCard,
             btn:lebtn,
         }, user );
-
-
     })
-
+    if(user.name == formData.author){
+        const supBtn = document.createElement("span");
+        supBtn.classList.add("button");
+        supBtn.classList.add("delEvent");
+        supBtn.innerText = "X";
+        articleCard.append(supBtn);
+    }
     parent.appendChild(articleCard);
 }
-function createInput(parent) {
-    const tempoInput = document.createElement("input");
-    tempoInput.classList.add("card__input");
-    parent.appendChild(tempoInput);
-}
-function removeInput(parent) {
-    const inputRemove = document.querySelector(".card__input");
-    parent.removeChild(inputRemove);
-}
+
 function addlineTable(parent, inputValue) {
     const first = parent.childNodes[0];
     const lineParticip = document.createElement("tr");

@@ -52,7 +52,7 @@ btnFormSend.addEventListener('click', async (evt) => {
     removeClass('isHidden',btnAddEvent);
     const newEvent = await formData.submitForm();
     console.log(newEvent.dates);
-    cardEvent(cards, newEvent);
+    cardEvent(cards, newEvent,user);
 })
 
 

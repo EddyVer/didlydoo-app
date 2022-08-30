@@ -28,5 +28,5 @@
 ### Link for didlydoo-app project!
 
 [Go Calculator]()
-
+https://eddyver.github.io/didlydoo-app/
 ### Screenshots

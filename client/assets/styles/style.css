@@ -43,7 +43,6 @@ table {
 }
 
 input {
-  -webkit-appearance: none;
   border-radius: 0;
 }
 
@@ -142,8 +141,8 @@ body {
 }
 
 .card {
-  color: #0e1c27;
   width: 600px;
+  color: #0e1c27;
   height: 340px;
   border: 2.4px solid #2C3333;
   margin-bottom: 5%;
@@ -480,5 +479,10 @@ body {
   }
   .action .form {
     width: 80vw;
+  }
+  input[type=checkbox] {
+    background-color: red;
+    width: 15px;
+    height: 15px;
   }
 }/*# sourceMappingURL=style.css.map */

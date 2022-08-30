@@ -1,304 +1,201 @@
 [
   {
-    "id": "b0f1d72fdee0",
-    "name": "date",
+    "id": "e97c0008b282",
+    "name": "aazeaze",
     "author": "Michou",
-    "description": "dsqgfsdg",
+    "description": "azeeazeaz",
     "dates": [
-      "2022-08-29",
-      "2022-08-30"
-    ],
-    "created_at": "2022-08-29T09:56:12.677Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T09:56:12.677Z",
-    "attendees": []
-  },
-  {
-    "id": "f15a9ce65789",
-    "name": "test date ",
-    "author": "Michou",
-    "description": "qsdgsdg",
-    "dates": [
-      "2022-08-29",
-      "2022-08-30",
       "2022-08-31",
-      "2022-09-01"
+      "2022-08-30",
+      "2022-08-29"
     ],
-    "created_at": "2022-08-29T09:18:28.441Z",
+    "created_at": "2022-08-29T08:53:25.251Z",
     "num_modification": 0,
-    "last_modification": "2022-08-29T09:18:28.441Z",
-    "attendees": []
+    "last_modification": "2022-08-29T08:53:25.251Z",
+    "attendees": [
+      {
+        "name": "Michou",
+        "dates": [
+          {
+            "date": "2022-08-29",
+            "available": false
+          },
+          {
+            "date": "2022-08-30",
+            "available": false
+          },
+          {
+            "date": "2022-08-31",
+            "available": false
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": "eae44f5929e3",
-    "name": "test date event",
+    "id": "1a19d9df476a",
+    "name": "aze",
     "author": "Michou",
-    "description": "edfqsdf",
+    "description": "azeazeeaz",
     "dates": [
-      "2022-08-29",
-      "2022-08-30",
-      "2022-08-31"
-    ],
-    "created_at": "2022-08-29T09:14:12.872Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T09:14:12.872Z",
-    "attendees": []
-  },
-  {
-    "id": "326decfa68d2",
-    "name": "dfsgsdf",
-    "author": "Michou",
-    "description": "sdgfdgs",
-    "dates": [
-      "2022-08-29",
-      "2022-08-30",
-      "2022-08-31",
-      "2022-09-01"
-    ],
-    "created_at": "2022-08-29T09:13:07.272Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T09:13:07.272Z",
-    "attendees": []
-  },
-  {
-    "id": "82ed02267c1c",
-    "name": "test date solu 2 ",
-    "author": "Michou",
-    "description": "qsdgsd",
-    "dates": [
-      "2022-08-30",
-      "2022-08-31",
-      "2022-09-01"
-    ],
-    "created_at": "2022-08-29T09:00:58.724Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T09:00:58.724Z",
-    "attendees": []
-  },
-  {
-    "id": "2fd2843dac7d",
-    "name": "test date solution ?",
-    "author": "Michou",
-    "description": "ezatzat",
-    "dates": [
-      "2022-08-29",
-      "2022-08-30",
-      "2022-08-31",
-      "2022-09-01"
-    ],
-    "created_at": "2022-08-29T08:59:30.904Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T08:59:30.904Z",
-    "attendees": []
-  },
-  {
-    "id": "3a502e8647c1",
-    "name": "deate t",
-    "author": "Michou",
-    "description": "qsdgqsdg",
-    "dates": [
-      "2022-08-29",
-      "2022-08-30",
-      "2022-08-31",
-      "2022-09-01"
-    ],
-    "created_at": "2022-08-29T08:52:19.083Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T08:52:19.083Z",
-    "attendees": []
-  },
-  {
-    "id": "5fdcda313c61",
-    "name": "qsdqg",
-    "author": "Michou",
-    "description": "qgsdg",
-    "dates": [
-      "2022-08-30",
-      "2022-08-31",
-      "2022-09-02"
-    ],
-    "created_at": "2022-08-29T08:51:10.492Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T08:51:10.492Z",
-    "attendees": []
-  },
-  {
-    "id": "422e7632d510",
-    "name": "test console log date ",
-    "author": "Michou",
-    "description": "qsdgsg",
-    "dates": [
-      "2022-08-30",
-      "2022-08-31",
-      "2022-09-01",
-      "2022-09-08",
       "2022-09-07"
     ],
-    "created_at": "2022-08-29T08:49:51.010Z",
+    "created_at": "2022-08-29T08:21:30.550Z",
     "num_modification": 0,
-    "last_modification": "2022-08-29T08:49:51.010Z",
+    "last_modification": "2022-08-29T08:21:30.550Z",
     "attendees": []
   },
   {
-    "id": "a0bccb417395",
-    "name": "sdfgsd",
+    "id": "28d89836f001",
+    "name": "'\"at'\"a",
     "author": "Michou",
-    "description": "dfshsdfh",
+    "description": "a\"t't'a\"",
     "dates": [
-      "2022-08-30",
-      "2022-08-31",
-      "2022-09-01",
-      "2022-09-08"
-    ],
-    "created_at": "2022-08-29T08:48:46.796Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T08:48:46.796Z",
-    "attendees": []
-  },
-  {
-    "id": "f3d193ee9172",
-    "name": "fsdg",
-    "author": "Michou",
-    "description": "sdfg",
-    "dates": [
-      "2022-08-30",
-      "2022-08-31",
       "2022-09-01"
     ],
-    "created_at": "2022-08-29T08:48:03.662Z",
+    "created_at": "2022-08-29T08:19:00.682Z",
     "num_modification": 0,
-    "last_modification": "2022-08-29T08:48:03.662Z",
+    "last_modification": "2022-08-29T08:19:00.682Z",
     "attendees": []
   },
   {
-    "id": "dc68f224589d",
-    "name": "hdfgjdf",
-    "author": "Michou",
-    "description": "gjdfgj",
-    "dates": [
-      "2022-08-30",
-      "2022-08-31",
-      "2022-09-01"
-    ],
-    "created_at": "2022-08-29T08:47:18.294Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T08:47:18.294Z",
-    "attendees": []
-  },
-  {
-    "id": "9619bdb3e5a5",
-    "name": "qdfgdf",
-    "author": "Michou",
-    "description": "sdfgdf",
-    "dates": [
-      "2022-08-30",
-      "2022-08-31",
-      "2022-08-29"
-    ],
-    "created_at": "2022-08-29T08:46:42.456Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T08:46:42.456Z",
-    "attendees": []
-  },
-  {
-    "id": "9038fc109712",
-    "name": "test date event",
-    "author": "Michou",
-    "description": "sqdgsdqg",
-    "dates": [
-      "2022-08-29",
-      "2022-08-30",
-      "2022-08-31"
-    ],
-    "created_at": "2022-08-29T08:45:45.163Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T08:45:45.163Z",
-    "attendees": []
-  },
-  {
-    "id": "fee491f170db",
-    "name": "console dale add event",
-    "author": "Michou",
-    "description": "qsdgsf",
-    "dates": [
-      "2022-08-30",
-      "2022-08-31"
-    ],
-    "created_at": "2022-08-29T08:44:57.119Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T08:44:57.119Z",
-    "attendees": []
-  },
-  {
-    "id": "3c8cab33cb08",
-    "name": "test une date",
-    "author": "Michou",
-    "description": "qgsdg",
-    "dates": [
-      "2022-08-29"
-    ],
-    "created_at": "2022-08-29T08:43:54.604Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T08:43:54.604Z",
-    "attendees": []
-  },
-  {
-    "id": "1b99dda5384b",
-    "name": "tes mich",
-    "author": "Michou",
-    "description": "sqdgqdsfgq",
-    "dates": [
-      "2022-08-30",
-      "2022-08-31",
-      "2022-09-01"
-    ],
-    "created_at": "2022-08-29T08:43:09.873Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T08:43:09.873Z",
-    "attendees": []
-  },
-  {
-    "id": "ff280cf78dae",
-    "name": "test jane",
+    "id": "9af615932e8b",
+    "name": "Lune de miel",
     "author": "Jane Doe",
-    "description": "qsdgqsdg",
+    "description": "zrezerzer",
     "dates": [
-      "2022-08-29",
-      "2022-08-30",
+      "2022-09-10"
+    ],
+    "created_at": "2022-08-29T08:18:10.944Z",
+    "num_modification": 0,
+    "last_modification": "2022-08-29T08:18:10.944Z",
+    "attendees": []
+  },
+  {
+    "id": "e08291d8e3b4",
+    "name": "the office",
+    "author": "Michou",
+    "description": "ezre",
+    "dates": [
+      "2022-09-01",
+      "2022-09-29"
+    ],
+    "created_at": "2022-08-29T08:15:44.716Z",
+    "num_modification": 0,
+    "last_modification": "2022-08-29T08:15:44.716Z",
+    "attendees": []
+  },
+  {
+    "id": "d409efa9e6e7",
+    "name": "moon knight",
+    "author": "Michou",
+    "description": "ezrrzere",
+    "dates": [
+      "2022-09-08",
+      "2022-09-09",
+      "2022-09-10"
+    ],
+    "created_at": "2022-08-29T08:14:12.079Z",
+    "num_modification": 0,
+    "last_modification": "2022-08-29T08:14:12.079Z",
+    "attendees": []
+  },
+  {
+    "id": "3d4ffae90c38",
+    "name": "viking",
+    "author": "Michou",
+    "description": "zeazea",
+    "dates": [
       "2022-08-31",
       "2022-09-01"
     ],
-    "created_at": "2022-08-29T08:42:15.150Z",
+    "created_at": "2022-08-29T08:12:53.526Z",
     "num_modification": 0,
-    "last_modification": "2022-08-29T08:42:15.150Z",
+    "last_modification": "2022-08-29T08:12:53.526Z",
     "attendees": []
   },
   {
-    "id": "78e34abebb65",
-    "name": "sdfgdfgs",
+    "id": "657c4a261c94",
+    "name": "a",
     "author": "Michou",
-    "description": "sdhfsdfh",
+    "description": "z",
     "dates": [
       "2022-08-30",
-      "2022-08-31"
+      "2022-08-31",
+      "2022-08-29"
     ],
-    "created_at": "2022-08-29T08:41:08.386Z",
+    "created_at": "2022-08-29T08:08:21.365Z",
     "num_modification": 0,
-    "last_modification": "2022-08-29T08:41:08.386Z",
+    "last_modification": "2022-08-29T08:08:21.365Z",
     "attendees": []
   },
   {
-    "id": "acb765e83247",
-    "name": "test jeand",
-    "author": "Jean-Daniel",
-    "description": "qdsgqsdgq",
+    "id": "54a2d5a42c4f",
+    "name": "zzzz",
+    "author": "zezzeze",
+    "description": "zeze",
     "dates": [
-      "2022-08-30",
-      "2022-08-31"
+      "2022-07-09",
+      "2022-07-09",
+      "2022-07-09"
     ],
-    "created_at": "2022-08-29T08:39:15.528Z",
+    "created_at": "2022-08-26T13:52:35.363Z",
     "num_modification": 0,
-    "last_modification": "2022-08-29T08:39:15.528Z",
+    "last_modification": "2022-08-26T13:52:35.363Z",
+    "attendees": []
+  },
+  {
+    "id": "e4a77c7ab44d",
+    "name": "aaaaa",
+    "author": "azeeza",
+    "description": "zaeaz",
+    "dates": [
+      "2022-07-09",
+      "2022-07-09",
+      "2022-07-09"
+    ],
+    "created_at": "2022-08-26T13:41:21.817Z",
+    "num_modification": 0,
+    "last_modification": "2022-08-26T13:41:21.817Z",
+    "attendees": []
+  },
+  {
+    "id": "c2f9a120adef",
+    "name": "zerzer",
+    "author": "erzzerzer",
+    "description": "zererzzer",
+    "dates": [
+      "2022-07-09"
+    ],
+    "created_at": "2022-08-26T13:40:39.840Z",
+    "num_modification": 0,
+    "last_modification": "2022-08-26T13:40:39.840Z",
+    "attendees": []
+  },
+  {
+    "id": "fe74e8632fe3",
+    "name": "erzrze",
+    "author": "fdsdfsdfsd",
+    "description": "erzrzedf",
+    "dates": [
+      "2022-07-09"
+    ],
+    "created_at": "2022-08-26T13:37:52.037Z",
+    "num_modification": 0,
+    "last_modification": "2022-08-26T13:37:52.037Z",
+    "attendees": []
+  },
+  {
+    "id": "4f68345fdd71",
+    "name": "rezezr",
+    "author": "ezrzerrez",
+    "description": "erzrez",
+    "dates": [
+      "2022-07-28"
+    ],
+    "created_at": "2022-08-26T13:36:38.139Z",
+    "num_modification": 0,
+    "last_modification": "2022-08-26T13:36:38.139Z",
     "attendees": []
   },
   {
@@ -312,6 +209,7 @@
     "created_at": "2022-08-26T08:08:13.876Z",
     "num_modification": 0,
     "last_modification": "2022-08-26T08:08:13.876Z",
+
     "attendees": []
   },
   {

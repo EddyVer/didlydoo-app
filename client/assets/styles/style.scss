@@ -21,6 +21,7 @@
   border: solid 2px red;
 }
 
+
 @media screen and (max-width: 480px) {
   .form__date__input{
     padding-bottom: 2.5em;
@@ -32,4 +33,10 @@
     }
    
   }
-}
+
+input[type='checkbox']{
+background-color: red;
+width: 15px;
+height: 15px;
+
+}}

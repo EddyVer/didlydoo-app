@@ -1,3 +1,4 @@
+
 .title{
   background-color: $color-Background;
   padding: 2.5rem;
@@ -6,9 +7,10 @@
   justify-content: center;
   align-items: center;
 }
+
 .action{
     &__add{
-    
+
     margin: auto;
     }
     background-color: $color-Light-Blue;
@@ -17,7 +19,7 @@
 }
 .button{
     background-color: #E7F6F2;
-    
+
 }
 .login__form{
 padding: 2.5%;
@@ -36,3 +38,4 @@ body{
 .form__date{
     padding-bottom: 2.5em;
 }
+

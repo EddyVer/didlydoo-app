@@ -20,3 +20,16 @@
 .errorfields{
   border: solid 2px red;
 }
+
+@media screen and (max-width: 480px) {
+  .form__date__input{
+    padding-bottom: 2.5em;
+  }
+  .action{
+    padding-top: 2em;
+    .form{
+      width: 80vw;
+    }
+   
+  }
+}

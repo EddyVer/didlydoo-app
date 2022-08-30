@@ -1,6 +1,6 @@
 .card{
     color :#0e1c27;
-    width: 340px;
+    width: 600px;
     height: 340px;
     border: 2.4px solid #2C3333;
     margin-bottom: 5%;
@@ -34,4 +34,12 @@ flex-wrap: wrap;
 gap: 5%;
 justify-content: center;
 align-items: center;
+}
+.card__table__title{
+    display: flex;
+    justify-content: space-around;
+& > span{
+    color: $color-dark;
+}
+
 }

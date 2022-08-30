@@ -124,6 +124,8 @@ export function cardEvent(parent, formData, user) {
         supBtn.classList.add("delEvent");
         supBtn.innerText = "X";
         articleCard.append(supBtn);
+
+        supBtn.addEventListener('click', () => {deleteEvent(formData.id)}  );
     }
     parent.appendChild(articleCard);
 }
@@ -160,6 +162,10 @@ function eventCloseModal(object, user){
     db.patchEventAttend(id, finalData)
 }
 
+function deleteEvent(id){
+    db.deleteEventsById(id);
+    document.getElementById(id).parentNode.removeChild(document.getElementById(id))
+}
 
 
 

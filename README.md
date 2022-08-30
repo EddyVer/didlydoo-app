@@ -31,4 +31,4 @@
 
 ### Screenshots
 
-[didlydoo-app](https://github.com/EddyVer/didlydoo-app/blob/dev.denis/client/assets/Pictures/BASE.png)
+![didlydoo-app](https://github.com/EddyVer/didlydoo-app/blob/dev.denis/client/assets/Pictures/BASE.png)

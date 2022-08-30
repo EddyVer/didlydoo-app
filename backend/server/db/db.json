@@ -1,64 +1,5 @@
 [
   {
-    "id": "e97c0008b282",
-    "name": "aazeaze",
-    "author": "Michou",
-    "description": "azeeazeaz",
-    "dates": [
-      "2022-08-31",
-      "2022-08-30",
-      "2022-08-29"
-    ],
-    "created_at": "2022-08-29T08:53:25.251Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T08:53:25.251Z",
-    "attendees": [
-      {
-        "name": "Michou",
-        "dates": [
-          {
-            "date": "2022-08-29",
-            "available": false
-          },
-          {
-            "date": "2022-08-30",
-            "available": false
-          },
-          {
-            "date": "2022-08-31",
-            "available": false
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "1a19d9df476a",
-    "name": "aze",
-    "author": "Michou",
-    "description": "azeazeeaz",
-    "dates": [
-      "2022-09-07"
-    ],
-    "created_at": "2022-08-29T08:21:30.550Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T08:21:30.550Z",
-    "attendees": []
-  },
-  {
-    "id": "28d89836f001",
-    "name": "'\"at'\"a",
-    "author": "Michou",
-    "description": "a\"t't'a\"",
-    "dates": [
-      "2022-09-01"
-    ],
-    "created_at": "2022-08-29T08:19:00.682Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T08:19:00.682Z",
-    "attendees": []
-  },
-  {
     "id": "9af615932e8b",
     "name": "Lune de miel",
     "author": "Jane Doe",
@@ -69,7 +10,17 @@
     "created_at": "2022-08-29T08:18:10.944Z",
     "num_modification": 0,
     "last_modification": "2022-08-29T08:18:10.944Z",
-    "attendees": []
+    "attendees": [
+      {
+        "name": "Michou",
+        "dates": [
+          {
+            "date": "2022-09-10",
+            "available": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "e08291d8e3b4",
@@ -83,22 +34,21 @@
     "created_at": "2022-08-29T08:15:44.716Z",
     "num_modification": 0,
     "last_modification": "2022-08-29T08:15:44.716Z",
-    "attendees": []
-  },
-  {
-    "id": "d409efa9e6e7",
-    "name": "moon knight",
-    "author": "Michou",
-    "description": "ezrrzere",
-    "dates": [
-      "2022-09-08",
-      "2022-09-09",
-      "2022-09-10"
-    ],
-    "created_at": "2022-08-29T08:14:12.079Z",
-    "num_modification": 0,
-    "last_modification": "2022-08-29T08:14:12.079Z",
-    "attendees": []
+    "attendees": [
+      {
+        "name": "Michou",
+        "dates": [
+          {
+            "date": "2022-09-01",
+            "available": false
+          },
+          {
+            "date": "2022-09-29",
+            "available": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "3d4ffae90c38",
@@ -112,7 +62,21 @@
     "created_at": "2022-08-29T08:12:53.526Z",
     "num_modification": 0,
     "last_modification": "2022-08-29T08:12:53.526Z",
-    "attendees": []
+    "attendees": [
+      {
+        "name": "Michou",
+        "dates": [
+          {
+            "date": "2022-08-31",
+            "available": false
+          },
+          {
+            "date": "2022-09-01",
+            "available": false
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "657c4a261c94",
@@ -209,7 +173,12 @@
     "created_at": "2022-08-26T08:08:13.876Z",
     "num_modification": 0,
     "last_modification": "2022-08-26T08:08:13.876Z",
-    "attendees": []
+    "attendees": [
+      {
+        "name": "Michou",
+        "dates": []
+      }
+    ]
   },
   {
     "id": "f5b6564b5dc4",
@@ -225,20 +194,7 @@
     "attendees": [
       {
         "name": "Michou",
-        "dates": [
-          {
-            "date": "2022-03-17",
-            "available": true
-          },
-          {
-            "date": "2022-03-18",
-            "available": false
-          },
-          {
-            "date": "2022-03-21",
-            "available": true
-          }
-        ]
+        "dates": []
       },
       {
         "name": "Jean-Daniel",
@@ -273,12 +229,7 @@
     "attendees": [
       {
         "name": "Michou",
-        "dates": [
-          {
-            "date": "2022-01-10",
-            "available": true
-          }
-        ]
+        "dates": []
       },
       {
         "name": "Jane Doe",

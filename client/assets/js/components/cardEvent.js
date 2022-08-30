@@ -158,8 +158,8 @@ function eventCloseModal(object, user){
         })
         object.parent.removeChild(object.child)
         console.log(finalData)
+        db.patchEventAttend(id, finalData)
     });
-    db.patchEventAttend(id, finalData)
 }
 
 function deleteEvent(id){

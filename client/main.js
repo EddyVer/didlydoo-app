@@ -20,7 +20,7 @@ const btnAddEvent = document.querySelector('.action__add');
 const formContainer = document.querySelector('.form');
 const formDate = document.querySelector('.form__date');
 const formDateInput = document.querySelector('.form__date__input');
-const btnAddDate = document.querySelector('.form__date__add');
+//const btnAddDate = document.querySelector('.form__date__add');
 const btnFormSend = document.querySelector('.form__send');
 const btnCloseForm = document.querySelector('.closeForm');
 const pageAction = document.querySelector('.action');
@@ -42,10 +42,7 @@ btnAddEvent.addEventListener('click', () => {
     toggleClass('isHidden', btnAddEvent);
     inputAuthor.value = user.name;
 })
-//btnShowDate.addEventListener('click', () => toggleClass('isHidden', formDate));
-btnAddDate.addEventListener('click', () => {
-    formData.addListItem();
-})
+
 btnFormSend.addEventListener('click', async (evt) => {
     evt.preventDefault();
     if (requiredCheck() === false) return;

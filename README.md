@@ -21,7 +21,12 @@
 - Benoit Bla
 - Anthony Den
 
+##Constrains :
+- No libraries
+- No js or css frameworks
+
 ### Link for didlydoo-app project!
 
-
 [Go Calculator]()
+
+### Screenshots

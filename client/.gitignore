@@ -23,6 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+db.json
+
 style.css
 style.css.map
 __MACOSX

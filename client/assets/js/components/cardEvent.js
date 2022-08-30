@@ -76,16 +76,15 @@ export function cardEvent(parent, formData, user) {
     paraAuthor.innerText = formData.author;
     articleCard.appendChild(paraAuthor);
 
-    const tableDate = document.createElement("table");
+    const tableDate = document.createElement("div");
     tableDate.classList.add("card__table");
-    const lineTitle = document.createElement("tr")
+    const lineTitle = document.createElement("div")
     lineTitle.classList.add("card__table__title");
-    const paraticipName = document.createElement("td");
+    const paraticipName = document.createElement("span");
     paraticipName.innerText = "Participant";
     lineTitle.appendChild(paraticipName);
-    
     formData.dates.map( date => {
-        const dateEvent = document.createElement("td");
+        const dateEvent = document.createElement("span");
         if(date.date){
             dateEvent.innerText = date.date;
         }
@@ -93,10 +92,9 @@ export function cardEvent(parent, formData, user) {
             dateEvent.innerText = date;
         }
         lineTitle.appendChild(dateEvent);
-    })
-
-
+    });
     tableDate.appendChild(lineTitle);
+    addlineTable(tableDate,formData,user);
 
     // console.log(lineTitle.childNodes.length);
     articleCard.appendChild(tableDate);
@@ -116,7 +114,9 @@ export function cardEvent(parent, formData, user) {
             child:lenfant,
             parent:articleCard,
             btn:lebtn,
-        }, user );
+            tableParent:tableDate
+        }, user,formData);
+       
     })
     if(user.name == formData.author){
         const supBtn = document.createElement("span");
@@ -124,43 +124,57 @@ export function cardEvent(parent, formData, user) {
         supBtn.classList.add("delEvent");
         supBtn.innerText = "X";
         articleCard.append(supBtn);
+        supBtn.addEventListener('click', () => {deleteEvent(formData.id)});
     }
     parent.appendChild(articleCard);
 }
 
-function addlineTable(parent, data) {
+function addlineTable(parent, data,user) {
     const first = parent.childNodes[0];
-    const lineParticip = document.createElement("section");
+    const lineParticip = document.createElement("div");
     lineParticip.classList.add("card__table__Particip");
     const nameParatic = document.createElement("span");
-    nameParatic.innerText = data.name;
+    nameParatic.innerText = user.name;
     lineParticip.appendChild(nameParatic);
     for (let i = 0; i < first.childNodes.length - 1; i++) {
         const validDate = document.createElement("span");
-        validDate.innerText = `test${i}`;
+        if(data.available){
+            validDate.innerText = "V";
+        }
+        else{
+            validDate.innerText = "X";
+        }
+        
         lineParticip.appendChild(validDate);
     }
 
     db.postEventsAttend(data);
     parent.appendChild(lineParticip);
 }
-function eventCloseModal(object, user){
+function eventCloseModal(object, user,form){
     const dates = document.querySelectorAll('.modal__date');
     let finalData = { name: user.name , dates: [] }
     const id = object.child.dataset.id;
+     
     object.btn.addEventListener("click",() => {
+        addlineTable(object.tableParent,form,user);
         finalData.dates = [...dates].map(date => {
             let bool = false
             if(date.querySelector('input').checked) bool = true;
             return { date : date.querySelector('input').id , available: bool }
-        })
+        });
+        db.patchEventAttend(id, finalData);
         object.parent.removeChild(object.child)
-        console.log(finalData)
+        //console.log(finalData);
     });
-    db.patchEventAttend(id, finalData)
+  
+   
 }
 
-
+function deleteEvent(id){
+    db.deleteEventsById(id);
+    document.getElementById(id).parentNode.removeChild(document.getElementById(id));
+}
 
 
 /*

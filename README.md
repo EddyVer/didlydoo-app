@@ -17,9 +17,9 @@
 🌼 Display the best possible date for the event according to everyone availabilities
 
 ## Group :
--Eddy Ver
--Benoit Bla
--Anthony Den
+- Eddy Ver
+- Benoit Bla
+- Anthony Den
 
 ### Link for didlydoo-app project!
 

@@ -164,6 +164,9 @@ function eventCloseModal(object, user){
     db.patchEventAttend(id, finalData)
 }
 
+
+
+
 /*
 [
     {

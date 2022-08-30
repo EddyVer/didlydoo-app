@@ -59,6 +59,7 @@ export function cardEvent(parent, formData, user) {
     
     const articleCard = document.createElement("article");
     articleCard.classList.add("card");
+    articleCard.id = `${formData.id}`;
 
     const createH3 = document.createElement("h3");
     createH3.classList.add("card__h3");
@@ -127,20 +128,20 @@ export function cardEvent(parent, formData, user) {
     parent.appendChild(articleCard);
 }
 
-function addlineTable(parent, inputValue) {
+function addlineTable(parent, data) {
     const first = parent.childNodes[0];
-    const lineParticip = document.createElement("tr");
+    const lineParticip = document.createElement("section");
     lineParticip.classList.add("card__table__Particip");
-    const nameParatic = document.createElement("th");
-    nameParatic.innerText = inputValue;
+    const nameParatic = document.createElement("span");
+    nameParatic.innerText = data.name;
     lineParticip.appendChild(nameParatic);
     for (let i = 0; i < first.childNodes.length - 1; i++) {
-        const validDate = document.createElement("th");
+        const validDate = document.createElement("span");
         validDate.innerText = `test${i}`;
         lineParticip.appendChild(validDate);
     }
 
-    db.postEventsAttend(inputValue);
+    db.postEventsAttend(data);
     parent.appendChild(lineParticip);
 }
 function eventCloseModal(object, user){
@@ -164,142 +165,7 @@ function eventCloseModal(object, user){
 
 /*
 [
-    {
-        "id": "7dcd841debeb",
-        "name": "aze",
-        "author": "aez",
-        "description": "aze",
-        "dates": [
-            {
-                "date": "2022-07-09",
-                "attendees": []
-            }
-        ],
-        "created_at": "2022-08-26T13:55:53.973Z",
-        "num_modification": 0,
-        "last_modification": "2022-08-26T13:55:53.973Z"
-    },
-    {
-        "id": "aa0e69942bf6",
-        "name": "aze",
-        "author": "azef",
-        "description": "fffff",
-        "dates": [
-            {
-                "date": "2022-07-09",
-                "attendees": []
-            }
-        ],
-        "created_at": "2022-08-26T13:53:18.866Z",
-        "num_modification": 0,
-        "last_modification": "2022-08-26T13:53:18.866Z"
-    },
-    {
-        "id": "54a2d5a42c4f",
-        "name": "zzzz",
-        "author": "zezzeze",
-        "description": "zeze",
-        "dates": [
-            {
-                "date": "2022-07-09",
-                "attendees": []
-            },
-            {
-                "date": "2022-07-09",
-                "attendees": []
-            },
-            {
-                "date": "2022-07-09",
-                "attendees": []
-            }
-        ],
-        "created_at": "2022-08-26T13:52:35.363Z",
-        "num_modification": 0,
-        "last_modification": "2022-08-26T13:52:35.363Z"
-    },
-    {
-        "id": "e4a77c7ab44d",
-        "name": "aaaaa",
-        "author": "azeeza",
-        "description": "zaeaz",
-        "dates": [
-            {
-                "date": "2022-07-09",
-                "attendees": []
-            },
-            {
-                "date": "2022-07-09",
-                "attendees": []
-            },
-            {
-                "date": "2022-07-09",
-                "attendees": []
-            }
-        ],
-        "created_at": "2022-08-26T13:41:21.817Z",
-        "num_modification": 0,
-        "last_modification": "2022-08-26T13:41:21.817Z"
-    },
-    {
-        "id": "c2f9a120adef",
-        "name": "zerzer",
-        "author": "erzzerzer",
-        "description": "zererzzer",
-        "dates": [
-            {
-                "date": "2022-07-09",
-                "attendees": []
-            }
-        ],
-        "created_at": "2022-08-26T13:40:39.840Z",
-        "num_modification": 0,
-        "last_modification": "2022-08-26T13:40:39.840Z"
-    },
-    {
-        "id": "fe74e8632fe3",
-        "name": "erzrze",
-        "author": "fdsdfsdfsd",
-        "description": "erzrzedf",
-        "dates": [
-            {
-                "date": "2022-07-09",
-                "attendees": []
-            }
-        ],
-        "created_at": "2022-08-26T13:37:52.037Z",
-        "num_modification": 0,
-        "last_modification": "2022-08-26T13:37:52.037Z"
-    },
-    {
-        "id": "4f68345fdd71",
-        "name": "rezezr",
-        "author": "ezrzerrez",
-        "description": "erzrez",
-        "dates": [
-            {
-                "date": "2022-07-28",
-                "attendees": []
-            }
-        ],
-        "created_at": "2022-08-26T13:36:38.139Z",
-        "num_modification": 0,
-        "last_modification": "2022-08-26T13:36:38.139Z"
-    },
-    {
-        "id": "1c187cf90ca7",
-        "name": "ezze",
-        "author": "zeze",
-        "description": "zeze",
-        "dates": [
-            {
-                "date": "2022-08-03",
-                "attendees": []
-            }
-        ],
-        "created_at": "2022-08-26T08:08:13.876Z",
-        "num_modification": 0,
-        "last_modification": "2022-08-26T08:08:13.876Z"
-    },
+
     {
         "id": "f5b6564b5dc4",
         "name": "My sweet 16",

@@ -146,9 +146,11 @@ export class EventDatas {
                 //{ name: string, dates : [ { date: date 'YYYY-MM-DD', available: boolean (true/false) } ] }
                 body: JSON.stringify(dataToPatch),
             });
-            response.json().then(data => {
+            const data = await response.json().then(data => {
                 console.log(data);
+                return data
             })
+            return data;
         }
         catch (error){
             console.error(error)

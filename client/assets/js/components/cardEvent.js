@@ -117,6 +117,7 @@ export function cardEvent(parent, formData, user) {
             btn:lebtn,
             tableParent:tableDate
         }, user,formData);
+        console.log(formData);
         db.postEventsAttend(formData);
     })
     if(user.name == formData.author){
@@ -141,8 +142,7 @@ function addlineTable(parent,data,user) {
     for (let i = 0; i < first.childNodes.length - 1; i++) {
         const validDate = document.createElement("span");
         console.log(data);
-        if(data.dates.attendees.attendees){
-        if(data.dates.attendees.available == true){
+        if(data.dates[0].attendees[0].available == true){
             validDate.innerText = "V";
         }
         else{
@@ -150,17 +150,17 @@ function addlineTable(parent,data,user) {
         }
         
         lineParticip.appendChild(validDate);
-    }}
+   }
 
     
     parent.appendChild(lineParticip);
 }
-function eventCloseModal(object, user,form){
+
+ function eventCloseModal(object, user,form){
     const dates = document.querySelectorAll('.modal__date');
     let finalData = { name: user.name , dates: [] }
     const id = object.child.dataset.id;
-    object.btn.addEventListener("click",() => {
-        addlineTable(object.tableParent,form,user);
+    object.btn.addEventListener("click",async () => {
         finalData.dates = [...dates].map(date => {
             let bool = false
             if(date.querySelector('input').checked) bool = true;
@@ -168,7 +168,9 @@ function eventCloseModal(object, user,form){
         });
         object.parent.removeChild(object.child);
         console.log(finalData);
-        db.patchEventAttend(id, finalData);
+        const rep = await db.patchEventAttend(id, finalData);
+        console.warn(rep);
+        addlineTable(object.tableParent,rep,user);
     });
 
 }

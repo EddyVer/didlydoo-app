@@ -27,7 +27,7 @@
 
 ### Link for didlydoo-app project!
 
-<a href ="https://eddyver.github.io/didlydoo-app/client/index.html"> Go didlydoo-app</a>
+<a href ="https://eddyver.github.io/didlydoo-app/main/client/index.html"> Go didlydoo-app</a>
 
 ### Screenshots
 
